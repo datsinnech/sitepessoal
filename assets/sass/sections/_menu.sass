@@ -1,0 +1,69 @@
+@use '../abstract/_mixins' as *
+@use '../abstract/_colors' as *
+@use '../abstract/_variables' as *
+
+.container-menu
+    display: flex
+    height: 9.735rem
+
+    .logo-menu
+        width: 15%
+        height: inherit
+        @include dspflex
+        justify-content: center
+
+    .menu
+        width: 60%
+        height: inherit
+        //background-color: tomato
+        @include dspflex
+        
+        .menu-list ul
+            @include dspflex
+            flex-direction: row
+            gap: 3rem
+
+            li
+                padding: 1.2rem
+
+                a
+                    transition: 300ms all ease
+                
+                    &:hover
+                        border-bottom: 0.325rem solid crimson
+
+
+    .languages-menu
+        width: 12%
+        height: inherit
+        //background-color: pink
+        @include dspflex
+        
+        select
+            width: 80%
+            height: 2.625rem
+
+            option
+                margin-bottom: 50px
+                text-align: center
+                font-weight: bold
+                font-size: 0.925rem
+                outline: none
+
+
+@media screen and (max-width: 1024px)
+    /* Styling for iPad Pro 12'9 */
+
+    //MENU STYLE
+    .container-menu
+        max-width: 100%
+        .logo-menu
+            svg[type="main-logo"]
+                width: $ipad-main-logo-width
+                height: $ipad-main-logo-height
+
+        .menu-list ul
+            gap: 1.5rem
+
+            
+            

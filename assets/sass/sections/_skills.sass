@@ -1,0 +1,64 @@
+@use '../abstract/_mixins' as *
+@use '../abstract/_variables' as *
+
+.skills 
+    //@include bgbackground(url('/assets/images/bgs/bubles.svg'))
+    height: 28.125rem
+    
+
+    .container-skills
+        text-align: center
+        .title
+            margin-bottom: 5rem
+            h2
+                font-size: 3rem
+                padding: 2rem
+                text-transform: uppercase
+
+        .skill-body
+            @include dspflex
+            flex-wrap: wrap
+            gap: 3.5rem
+            .card
+                @include bxshadow
+                @include dspflex
+                flex-direction: column
+                border-radius: 15px
+                width: 9.375rem
+                height: 9.375rem
+
+                transition: 300ms ease all
+
+                &:hover
+                    transform: scale(1.2)
+            
+            .card-footer
+                margin-top: 0.9375rem
+                span
+                    font-weight: 600
+                    text-transform: uppercase
+                    
+                    letter-spacing: 0.0625rem
+
+
+@media screen and (max-width: 1024px)
+    .skills
+        max-width: $ipad-portrait-width
+        width: 100%
+        height: $skills-height-container
+
+        .container-skills .title
+            text-align: center
+            margin-inline: auto
+            
+
+@media screen and (max-width: 1366px) //Landscape
+    .skills
+        max-width: $ipad-landscape-width
+        width: 100%
+        height: $skills-height-container
+
+        .container-skills .title
+            text-align: center
+            margin-inline: auto
+    

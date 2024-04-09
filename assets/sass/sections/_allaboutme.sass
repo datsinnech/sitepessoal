@@ -1,0 +1,93 @@
+@use '../abstract/_mixins' as *
+@use '../abstract/_colors' as *
+@use '../layout/_globals' as *
+@use '../abstract/_variables' as *
+
+.purpose
+    height: 1000px
+
+    
+    .container-purpose
+            //height: inherit
+            margin-top: 150px
+            max-width: 100%
+            @include dspflex
+            align-items: flex-start
+            
+
+            .left
+                height: inherit
+                width: 65%
+                padding: 4%
+
+                @include dspflex
+                flex-direction: column
+                align-items: flex-start
+
+                .title
+                    margin-bottom: 20px
+
+                    h2
+                        font-size: 3rem
+                        font-weight: 600
+                    h1
+                        font-size: 5rem
+                        font-weight: 900
+                        letter-spacing: 4px
+
+                .text-body
+                    
+                    max-width: 85%
+
+                    p
+                        letter-spacing: 2px
+                        line-height: 22px
+                
+
+            .right
+                width: 35%
+                height: inherit
+                @include dspflex
+                
+
+                img
+                    height: 350px
+                    width: 350px
+                    border-radius: 50%
+                    border: solid 0.675rem whitesmoke
+                    @include bxshadow
+
+
+@media screen and (max-width: 1024px)
+    .container-purpose
+        width: $ipad-portrait-width
+        max-width: 100%
+        @include dspflex
+        flex-direction: column
+        //background: tomato
+            
+        .left
+            margin-inline: auto
+            
+            .title
+
+               
+
+                .text-body
+                    p
+                        line-height: 22px
+                
+
+        .right
+            //width: 100%
+            //height: inherit
+            margin-inline: auto            
+            margin-bottom: 300px
+
+            .foto-perfil img
+                height: 450px
+                width: 450px
+                border-radius: 50%
+                border: solid 0.675rem whitesmoke
+                @include bxshadow
+                

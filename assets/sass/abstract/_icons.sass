@@ -1,0 +1,63 @@
+@use '../abstract/_colors' as *
+
+
+svg
+    height: 50px
+    width: 50px
+    transition: 300ms all ease-in-out
+
+    &[type="main-logo"]
+        fill: $main-logo-color
+        &:hover
+            cursor: pointer
+            transform: scale(1.2)
+            fill: darken($main-logo-color, 10%)
+
+    &[type="grid"]
+        fill: tomato
+
+    &[type="flutter"]
+        fill: $flutter-icon
+        &:hover
+            fill: darken($flutter-icon, 10%)
+
+    &[type="html"]
+        fill: $html-icon
+        &:hover
+            fill: darken($html-icon, 10%)
+
+    &[type="css"]
+        fill: $css-icon
+        &:hover
+            fill: darken($css-icon, 10%)
+
+    &[type="sass"]
+        fill: $sass-icon
+        &:hover
+            fill: darken($sass-icon, 10%)
+
+    &[type="js"]
+        fill: $js-icon
+        &:hover
+            fill: darken($js-icon, 10%)        
+
+    &[type="dart"]
+        fill: $dart-icon
+        &:hover
+            fill: darken($dart-icon, 10%)
+
+    &[type="flutter"]
+        fill: $flutter-icon
+        &:hover
+            fill: darken($flutter-icon, 10%)
+
+    &[type="linkedin"]
+        fill: $linkedin-icon
+        &:hover
+            fill: darken($linkedin-icon, 10%)
+
+    &[type="instagram"]
+        fill: crimson
+        &:hover
+            fill: darken(crimson, 10%)
+        

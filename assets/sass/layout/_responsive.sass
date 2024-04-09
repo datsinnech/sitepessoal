@@ -1,0 +1,44 @@
+@use '../abstract/_variables' as *
+@use '../abstract/_mixins' as *
+
+@media screen and (max-width: 1024px)
+
+    
+    
+    /*.rleft
+        padding: $ipad-padding-resp*/
+    
+    .rprofile 
+        padding-right: $ipad-padding-resp
+
+    .rview-limit
+        margin: 0 auto
+        width: $ipad-portrait-width
+       
+
+    .rmenu-list ul
+        gap: 1rem
+
+    .rpurpose
+        .left
+            width: 45%
+
+        .right
+            width: 30%
+
+    .rodape
+        height: $ipad-height-footer-resp
+        width: $ipad-portrait-width
+        @include dspflex     
+
+        .rfooter
+            @include dspflex
+            flex-direction: column
+            width: 100%
+            height: 800px
+
+            .left
+                margin-top: $ipad-margin-top-resp
+            
+            .right .title
+                margin-top: $ipad-margin-top-resp

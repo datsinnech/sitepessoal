@@ -1,0 +1,88 @@
+@use '../abstract/_colors' as *
+@use '../abstract/_mixins' as *
+@use '../abstract/_variables' as *
+
+footer
+    background-color: $bg-footer-dark
+    height: 400px
+    width: 100%
+
+    .container-footer
+        padding: 2rem
+        height: 400px
+        @include dspflex
+        //background: whitesmoke
+        gap: 3.125rem
+
+        .left
+            @include dspflex
+            flex-direction: column
+            align-items: flex-start
+            width: 42rem
+            //background: pink
+
+            .title
+                h2
+                    font-size: 3rem
+                    line-height: 3.375rem
+                    color: $font-lightb
+
+                    i
+                        margin-right: 10px
+
+            .adress
+                margin-top: 4rem
+
+                p
+                    font-weight: 600
+                    font-size: 1.1rem
+                    margin: 1rem
+                    color: $font-lightb
+
+                    i
+                        margin-right: 10px
+
+        .right
+            //background: pink
+            @include dspflex
+            flex-direction: column
+            width: 42rem
+            height: 13.53125rem
+            margin-top: -40px
+
+            .title
+                h2
+                    font-size: 3rem
+                    line-height: 3.375rem
+                    color: $font-lightb
+                    margin-bottom: 60px
+
+            .socialmedias
+                margin-top: -30px
+                @include dspflex
+                gap: 30px
+
+                #instagram
+                    width: 41px
+                    height: 41px
+                    
+
+@media screen and (max-width: 1366px) // landscape
+    rodape
+        max-width: $ipad-landscape-width
+        height: $ipad-height-footer-landscape-resp
+
+        @include dspflex
+        flex-direction: column
+
+    .rfooter
+            @include dspflex
+            flex-direction: column
+            width: 100%
+            height: 800px
+
+            .left
+                margin-top: $ipad-margin-top-resp
+            
+            .right .title
+                margin-top: $ipad-margin-top-resp

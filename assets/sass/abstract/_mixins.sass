@@ -1,0 +1,19 @@
+@use '../abstract/_colors' as *
+
+@mixin dspflex
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin bxshadow
+    -webkit-box-shadow: 10px 10px 15px -8px $bshadow-color
+    -moz-box-shadow: 10px 10px 15px -8px $bshadow-color
+    box-shadow: 10px 10px 15px -8px $bshadow-color
+    -o-box-shadow: 10px 10px 15px -8px $bshadow-color
+
+
+@mixin bgbackground($path)
+    background-image: $path
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat

@@ -1,0 +1,73 @@
+@use '../abstract/_mixins' as *
+@use '../abstract/_colors' as *
+@use '../abstract/_variables' as *
+
+.getajob
+    //margin-top: 10rem
+    height: 35rem
+    @include dspflex
+    background-color: #445569
+    @include bgbackground(url('../assets/image/bgs/lines.svg'))
+    
+    .container-getajob
+        @include dspflex
+        flex-direction: column
+
+        .title
+            text-align: center
+            color: $font-darkb
+            background: whitesmoke
+            h2
+                font-size: 3rem
+                padding: 2rem
+                text-transform: uppercase
+
+        .btn-cta 
+            margin-top: 3rem
+
+            button
+                width: 29.375rem
+                height: 4rem
+                border-radius: 0.9375rem
+                border: none
+                outline: none
+                transition: 200ms ease-in-out
+                background-color: $bg-dark
+                color: white
+
+                font-size: 1.2rem
+
+                &:hover
+                    cursor: pointer
+                    background-color: lighten($font-lightb, 10%)
+
+@media screen and (max-width: 1024px) //Portrait
+    .getajob
+        width: 100vw
+        max-width: 1024px
+        
+
+        .container-getajob
+            max-width: 100%
+                
+            .title h2
+                font-size: 1.5rem
+                text-align: center
+                margin-inline: auto
+                
+
+@media screen and (max-width: 1366px) //Landscape
+     .getajob
+        width: 100vw
+        max-width: $ipad-landscape-width
+        
+
+        .container-getajob
+            max-width: 100%
+                
+            .title h2
+                font-size: 1.5rem
+                text-align: center
+                margin-inline: auto
+
+        
